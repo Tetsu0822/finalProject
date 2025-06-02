@@ -83,6 +83,13 @@ a {
   line-height: 1.5;
 }
 
+.title-xl {
+  color: #000000;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
 .title-xxl {
   color: #0027D5;
   font-size: 120px;
@@ -135,6 +142,16 @@ a {
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.main-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .footer {
