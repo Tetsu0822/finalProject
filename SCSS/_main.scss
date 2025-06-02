@@ -1,0 +1,14 @@
+.header-link {
+    display: inline-block;
+    color: $font-color-base;
+    font-size: 28px;
+    font-family: "Noto Sans TC",sans-serif;
+    font-weight: 500;
+    line-height: $font-line-height;
+    text-decoration: none;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 24px 0;
+}

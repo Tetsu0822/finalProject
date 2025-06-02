@@ -1,0 +1,131 @@
+//=============== Swiper =============//
+.swiper {
+  width: 90%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.swiper-wrapper-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+  font-size: 16px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #0027D5;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #0027D5;
+}
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 18px;
+  color: #fff;
+}
+
+@media screen and (max-width:768px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: 520px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 100%;
+  }
+  .swiper-button-prev {
+    left: auto;
+    right: 15%;
+  }
+}
+li.swiper-slide {
+  background: #fff;
+  overflow: hidden;
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 0px;
+}
+.card-date {
+  font-size: $font-size-base;
+  color: $font-color-base;
+  font-weight: 500;
+}
+.card-tags {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.card-tags-text {
+    color: $color-blue;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: $font-line-height;
+}
+.card-mark {
+    color: #fff;
+    background: $color-blue;
+    padding: 6px 12px;
+    border: 1px solid $color-blue;
+    border-radius: 40px;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 28px;
+}
+.card-desc {
+    height: 48px;
+    font-size: $font-size-base;
+    line-height: $font-line-height;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;        /* 限制顯示 3 行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.read-more-btn {
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+.read-more-btn:hover {
+    color: #ffffff;
+    background-color: #000000;
+}

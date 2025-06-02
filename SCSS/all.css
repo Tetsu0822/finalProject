@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000000;
+  font-family: "Noto Sans TC", "Helvetica,Arial,sans-serif";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 90px;
+  padding: 24px 80px;
+}
+
+.footer {
+  width: 100%;
+  height: 72px;
+}
+
+.header-link {
+  display: inline-block;
+  color: #000000;
+  font-size: 28px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.footer-text {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.swiper {
+  width: 90%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper-wrapper-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+  font-size: 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #0027D5;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #0027D5;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 18px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: 520px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 100%;
+  }
+  .swiper-button-prev {
+    left: auto;
+    right: 15%;
+  }
+}
+li.swiper-slide {
+  background: #fff;
+  overflow: hidden;
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-content {
+  padding: 0px;
+}
+
+.card-date {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.card-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.card-tags-text {
+  color: #0027D5;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-mark {
+  color: #fff;
+  background: #0027D5;
+  padding: 6px 12px;
+  border: 1px solid #0027D5;
+  border-radius: 40px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.card-desc {
+  height: 48px;
+  font-size: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制顯示 3 行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.read-more-btn {
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}/*# sourceMappingURL=all.css.map */

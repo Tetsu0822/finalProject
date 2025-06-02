@@ -1,0 +1,10 @@
+// 變數、CSSReset
+@import "_variable.scss";
+@import "_reset.scss";
+// 全站設定
+@import "_base.scss";
+@import "_layout.scss";
+@import "_main.scss";
+// 第三方
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import "other"
