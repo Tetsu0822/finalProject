@@ -20,3 +20,16 @@ a {
     text-decoration: none;
     color: #000;
 }
+
+.title-lg {
+    color: $color-blue;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: $font-line-height;
+}
+.title-xxl {
+    color: $color-blue;
+    font-size: 120px;
+    font-weight: bold;
+    line-height: $font-line-height;
+}
