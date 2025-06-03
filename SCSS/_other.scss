@@ -3,7 +3,11 @@
   width: 90%;
 }
 .container {
-  max-width: 1432px;
+  width: 100%;
+  margin: 0 auto;
+}
+.swiper-header {
+  max-width: 1296px;
   margin: 0 auto;
 }
 .swiper-wrapper-area {
