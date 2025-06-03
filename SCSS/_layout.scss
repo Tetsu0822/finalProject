@@ -1,8 +1,17 @@
-.wrapper {
+.wrapper, .main-section, .success-section {
     max-width: 1920px;
     margin: 0 auto;
 }
-
+.success-section {
+    background-color: #FBFBFB;
+}
+@media screen and (max-width:375px) {
+    .main-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+}
 //============== Header ================//
 .header {
     width: 100%;
@@ -78,13 +87,7 @@
         font-weight: 500;
     }
 }
-.b-icon {
-    display: flex;
-    .icon-item {
-        width: 44px;
-        height: 44px;
-    }
-}
+
 //============== 3. Main-wrapper ================//
 .main-wrapper {
     max-width: 1432px;;
@@ -97,8 +100,58 @@
     gap: 24px;
 }
 
-//============== Footer ================//
+//============== 4. Srv-Wrapper ================//
+.srv-section {
+    width: 100%;
+    .srv-wrapper {
+        max-width: 1296px;;
+        margin: 0 auto;
+        background-color: $body-background-color;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+    }
+}
+//============== 5. Srv-Wrapper ================//
+.success-wrapper {
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .all-block {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .top-block {
+            display: flex;
+            .left-block {
+                width: 745px;
+                height: 626px;
+                padding: 24px;
+                background-color: #EDEDED;
+            }
+            .float-top {
+                width: 526px;
+                height: 296px;
+                background-color: #fff;
+                margin-left: -195px;
+                margin-top: 24px;
+                padding: 80px 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+            }
+            
+        }
+    }
+}
+//============== 6. Footer ================//
 .footer {
     width: 100%;
     height: 72px;
+    padding: 80px 0;
 }

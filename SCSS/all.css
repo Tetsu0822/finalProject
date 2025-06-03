@@ -76,8 +76,21 @@ a {
   color: #000;
 }
 
+p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
 .title-lg {
   color: #0027D5;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.title-lg-black {
+  color: #000000;
   font-size: 28px;
   font-weight: bold;
   line-height: 1.5;
@@ -97,11 +110,21 @@ a {
   line-height: 1.5;
 }
 
-.wrapper {
+.wrapper, .main-section, .success-section {
   max-width: 1920px;
   margin: 0 auto;
 }
 
+.success-section {
+  background-color: #FBFBFB;
+}
+
+@media screen and (max-width: 375px) {
+  .main-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .header {
   width: 100%;
   display: flex;
@@ -178,14 +201,6 @@ a {
   font-weight: 500;
 }
 
-.b-icon {
-  display: flex;
-}
-.b-icon .icon-item {
-  width: 44px;
-  height: 44px;
-}
-
 .main-wrapper {
   max-width: 1432px;
   margin: 0 auto;
@@ -197,9 +212,57 @@ a {
   gap: 24px;
 }
 
+.srv-section {
+  width: 100%;
+}
+.srv-section .srv-wrapper {
+  max-width: 1296px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.success-wrapper {
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.success-wrapper .all-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.success-wrapper .all-block .top-block {
+  display: flex;
+}
+.success-wrapper .all-block .top-block .left-block {
+  width: 745px;
+  height: 626px;
+  padding: 24px;
+  background-color: #EDEDED;
+}
+.success-wrapper .all-block .top-block .float-top {
+  width: 526px;
+  height: 296px;
+  background-color: #fff;
+  margin-left: -195px;
+  margin-top: 24px;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .footer {
   width: 100%;
   height: 72px;
+  padding: 80px 0;
 }
 
 .header-link {
@@ -210,6 +273,71 @@ a {
   font-weight: 500;
   line-height: 1.5;
   text-decoration: none;
+}
+
+.b-icon {
+  display: flex;
+}
+.b-icon .icon-item {
+  width: 44px;
+  height: 44px;
+}
+
+.pj-block, .pj-block-reverse {
+  width: 100%;
+  display: flex;
+  padding: 0 110px;
+}
+.pj-block .img-block, .pj-block-reverse .img-block {
+  max-width: 636px;
+}
+.pj-block .content-block, .pj-block-reverse .content-block {
+  width: 480px;
+  height: 210px;
+  background-color: #fff;
+  margin-left: -40px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 0;
+}
+
+.pj-block-reverse {
+  flex-direction: row-reverse;
+}
+
+.short-line {
+  width: 40px;
+  height: 40px;
+  padding: 18.75px 5px;
+}
+
+.line-item {
+  width: 30px;
+  height: 2.5px;
+  background: #0027D5;
+}
+
+.ct-desc {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pj-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.pj-footer .pj-footer-cycle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 40px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .footer-text {
@@ -346,7 +474,7 @@ li.swiper-slide {
   font-size: 16px;
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 限制顯示 3 行 */
+  -webkit-line-clamp: 2; /* 限制顯示 2 行 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

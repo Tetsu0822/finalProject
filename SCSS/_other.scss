@@ -113,7 +113,7 @@ li.swiper-slide {
     font-size: $font-size-base;
     line-height: $font-line-height;
     display: -webkit-box;
-    -webkit-line-clamp: 2;        /* 限制顯示 3 行 */
+    -webkit-line-clamp: 2;        /* 限制顯示 2 行 */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

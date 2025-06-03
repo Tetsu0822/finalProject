@@ -21,8 +21,20 @@ a {
     color: #000;
 }
 
+p {
+    font-size: $font-size-base;
+    font-weight: bold;
+    line-height: $font-line-height;
+}
+
 .title-lg {
     color: $color-blue;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: $font-line-height;
+}
+.title-lg-black {
+    color: $font-color-base;
     font-size: 28px;
     font-weight: bold;
     line-height: $font-line-height;
