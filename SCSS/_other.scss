@@ -37,6 +37,7 @@
   transform: translateY(-50%);
   z-index: 10;
 }
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background-color: #0027D5;
@@ -84,7 +85,6 @@ li.swiper-slide {
   font-weight: 500;
 }
 .card-tags {
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -113,10 +113,10 @@ li.swiper-slide {
     font-size: $font-size-base;
     line-height: $font-line-height;
     display: -webkit-box;
-    -webkit-line-clamp: 2;        /* 限制顯示 2 行 */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // -webkit-line-clamp: 2;        /* 限制顯示 2 行 */
+    // -webkit-box-orient: vertical;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
     margin-top: 8px;
     margin-bottom: 16px;
 }
@@ -132,4 +132,14 @@ li.swiper-slide {
 .read-more-btn:hover {
     color: #ffffff;
     background-color: #000000;
+}
+
+@media screen and (max-width:375px) {
+  .swiper-wrapper-area {
+    height: auto;
+  }
+  .card-img {
+    width: 351px;
+    height: 375px;
+  }
 }

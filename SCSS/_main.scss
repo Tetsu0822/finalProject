@@ -1,15 +1,52 @@
-//=============== Header ======================//
-.header-link {
-    display: inline-block;
-    color: $font-color-base;
-    font-size: 28px;
-    font-family: "Noto Sans TC",sans-serif;
-    font-weight: 500;
-    line-height: $font-line-height;
-    text-decoration: none;
+/* utils */
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
-//=============== Public Use ======================//
+.h2 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.text-primary {
+    color: $color-blue;
+}
+
+.text-gray {
+    color: #4b4b4b;
+}
+
+.fw-Medium {
+    font-weight: 500;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.break-line {
+    display: none;
+}
+
+.ellipsis-mutiple {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .b-icon {
     display: flex;
     .icon-item {
@@ -18,29 +55,218 @@
     }
 }
 
-//=============== Srv Section ======================//
-.pj-block, .pj-block-reverse {
+/*===== Page - index =====*/
+
+.about-profile {
+  display: flex;
+}
+
+.about-photo,
+.about-intro {
+  width: 50%;
+}
+.about-photo {
+    padding: 300px 80px;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 300px 80px;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .about-title {
+        font-size: 120px;
+    }
+    .about-subtitle {
+        font-size: 28px;
+        color: $color-blue;
+    }
+}
+
+.about-desc {
+  width: 56%;
+  padding: 80px 40px;
+  margin-right: 80px;
+  margin-left: auto;
+  font-size: 28px;
+  background-color: white;
+  position: relative;
+  margin-bottom: -160px;
+  right: 0;
+  bottom: 160px;
+}
+
+.about-desc p + p {
+  margin: 16px 0;
+}
+.desc-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1710px) {
+    .about-intro .about-title {
+        font-size: calc(((100vw / 2) - 160px) / 6);
+
+    }
+}
+
+@media (max-width: 992px) {
+.about-profile {
+        flex-direction: column;
+    }
+
+    .about-photo, .about-intro {
+        width: 100%;
+    }
+
+    .about-photo img {
+        height: 375px;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .about-intro {
+        padding: 24px 24px 200px;
+    }
+
+    .about-intro .about-title {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 375px) {
+  .about-profile {
+    flex-direction: column;
+  }
+
+  .about-photo,
+  .about-intro {
     width: 100%;
+    padding: 24px 24px 150px 24px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .about-intro {
+    gap: 8px;
+  }
+
+  .about-title {
+    font-size: 48px;
+  }
+
+  .about-subtitle {
+    font-size: 20px;
+  }
+
+  .about-desc {
+    width: auto;
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 0;
+    bottom: auto;
+    font-size: 18px;
+    padding: 40px 24px;
+    background-color: white;
+  }
+
+  .about-desc p {
+    margin: 12px 0;
+  }
+
+  .b-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+
+  .icon-item img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+    .float-wrapper {
+        padding: 0 12px;
+        margin-top: 0;
+    }
+    .float-list {
+        width: calc(100% - 24px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+//============== 3. Main-wrapper ================//
+.main-wrapper {
+    max-width: 1432px;;
+    margin: 0 auto;
+    background-color: $color-white;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+//=============== Srv Section ======================//
+.srv-section {
+    width: 100%;
+}
+.srv-wrapper {
+    max-width: 1296px;;
+    margin: 0 auto;
+    background-color: $color-white;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+.pj-block, .pj-block-reverse {
+    //width: 100%;
     display: flex;
     padding: 0 110px;
-    .img-block {
-        max-width: 636px;
-    }
-    .content-block {
-        width: 480px;
-        height: 210px;
-        background-color: #fff;
-        margin-left: -40px;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        gap: 0;
-        
-    }
 }
 .pj-block-reverse {
     flex-direction: row-reverse;
+}
+.img-block {
+    width: 59%;
+}
+.content-block {
+    width: 44%;
+    height: 210px;
+    background-color: #fff;
+    margin-left: -40px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 0;
+    
 }
 .short-line {
     width: 40px;
@@ -71,10 +297,57 @@
         text-align: center;
     }
 }
-//=============== Success Section ======================//
 
-//=============== Footer ===========================//
-.footer-text {
-    text-align: center;
-    padding: 24px 0;
+@media screen and (max-width:375px) {
+    .main-section {
+        flex-direction: column-reverse;
+    }
+    .main-wrapper {
+        width: 100%;
+        padding: 64px 0;
+    }
+    .srv-wrapper {
+        width: 100%;
+        padding: 64px 0;
+        gap: 0;
+    }
+    .h2 {
+        font-size: 48px;
+        text-align: center;
+    }
+    .pj-block {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .pj-block-reverse {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .img-block {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0 12px;
+    }
+    .content-block {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 24px;
+        align-self: flex-start;
+    }
+    .pj-footer {
+        align-self: flex-end;
+        flex-direction: column;
+        gap: 0;
+    }
+    .pj-footer-cycle {
+        align-self: flex-end;
+    }
+    
+    
 }

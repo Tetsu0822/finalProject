@@ -1,157 +1,42 @@
-.wrapper, .main-section, .success-section {
-    max-width: 1920px;
-    margin: 0 auto;
-}
-.success-section {
-    background-color: #FBFBFB;
-}
-@media screen and (max-width:375px) {
-    .main-section {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    
-}
-//============== Header ================//
-.header {
-    width: 100%;
+/* 導航列 */
+.navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 40px;
-    height: 90px;
-    padding: 24px 80px;
-}
-
-//============== 1. Index Page AboutSection ================//
-.about-section {
-    width: 100%;
-    height: 834px;
-    display: flex;
-    gap: -160px;
-    background-color: $body-background-color;
-    .l-block {
-        width: 50%;
-        padding: 300px 80px;
-        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-    .r-block {
+    ul {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 12px;
-        width: 50%;
-        padding: 300px 80px;
-        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
+        list-style: none;
     }
-}
-
-//============== 2. Float Wrapper ================//
-.float-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding: 0 80px;
-    margin-top: -160px;
-}
-.float-list {
-    color: $font-color-base;
-    background: #fff;
-    max-width: 1077px;
-    height: 362px;
-    padding: 80px 40px;
-    .float-list-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 16px;
-    }
-    .float-top-title {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-    .title-item {
-        color: $font-color-base;
+    .nav-item {
+        color: #333;
+        text-decoration: none;
         font-size: 28px;
-        font-weight: 500;
-    }
-}
-
-//============== 3. Main-wrapper ================//
-.main-wrapper {
-    max-width: 1432px;;
-    margin: 0 auto;
-    background-color: $body-background-color;
-    padding: 80px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-//============== 4. Srv-Wrapper ================//
-.srv-section {
-    width: 100%;
-    .srv-wrapper {
-        max-width: 1296px;;
-        margin: 0 auto;
-        background-color: $body-background-color;
-        padding: 80px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 32px;
-    }
-}
-//============== 5. Srv-Wrapper ================//
-.success-wrapper {
-    max-width: 1296px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    .all-block {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        .top-block {
-            display: flex;
-            .left-block {
-                width: 745px;
-                height: 626px;
-                padding: 24px;
-                background-color: #EDEDED;
-            }
-            .float-top {
-                width: 526px;
-                height: 296px;
-                background-color: #fff;
-                margin-left: -195px;
-                margin-top: 24px;
-                padding: 80px 40px;
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-
-            }
-            
+        line-height: 1.5;
+        font-weight: 700;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        display: block;
+        &:hover {
+            color: $color-blue;
         }
     }
 }
-//============== 6. Footer ================//
+
+/* 頁尾 */
 .footer {
-    width: 100%;
-    height: 72px;
-    padding: 80px 0;
+    background-color: $color-white;
+    padding: 24px 0;
+    text-align: center;
+    p {
+        font-family: $font-family-base;
+        font-weight: 500;
+        font-size: $font-size-base;
+        line-height: $font-line-height;
+        letter-spacing: 0%;
+        color: #666;
+        margin: 0;
+    }
 }
+
+/* 主內容區 */

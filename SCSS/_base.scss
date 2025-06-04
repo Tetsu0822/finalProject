@@ -6,8 +6,9 @@ body {
     color: $font-color-base;
     font-family: $font-family-base;
     font-size: $font-size-base;
+    font-weight: 500;
     line-height: $font-line-height;
-
+    background-color: #fbfbfb;
 }
 
 img {
@@ -17,14 +18,19 @@ img {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
-    color: #000;
+    color: inherit;
 }
 
-p {
-    font-size: $font-size-base;
-    font-weight: bold;
-    line-height: $font-line-height;
+.h2 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.h3 {
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .title-lg {
