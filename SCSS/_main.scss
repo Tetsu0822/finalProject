@@ -55,8 +55,11 @@
     }
 }
 
-/*===== Page - index =====*/
+.bt-line {
+    border-bottom: 2px solid #333;
+}
 
+/*===== Page - index =====*/
 .about-profile {
   display: flex;
 }
@@ -146,9 +149,9 @@
 }
 
 @media (max-width: 375px) {
-  .about-profile {
-    flex-direction: column;
-  }
+    .about-profile {
+        flex-direction: column;
+    }
 
   .about-photo,
   .about-intro {
@@ -218,6 +221,8 @@
 .main-section {
     display: flex;
     flex-direction: column;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 //============== 3. Main-wrapper ================//
 .main-wrapper {
@@ -348,6 +353,16 @@
     .pj-footer-cycle {
         align-self: flex-end;
     }
-    
-    
+}
+
+//=============== Case Section ======================//
+.case-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.case-img {
+    width: 57.48%;
+    padding: 24px;
+    background: #EDEDED;
 }
