@@ -15,6 +15,10 @@
     font-weight: 700;
 }
 
+.h4 {
+    font-size: 24px;
+}
+
 .text-primary {
     color: $color-blue;
 }
@@ -57,7 +61,15 @@
 
 .bt-line {
     display: block;
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.circle-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
 }
 /*===== Page - index =====*/
 .about-profile {
@@ -208,7 +220,7 @@
 }
 
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
     .float-wrapper {
         padding: 0 12px;
         margin-top: 0;
@@ -306,7 +318,7 @@
     }
 }
 
-@media screen and (max-width:375px) {
+@media (max-width:375px) {
     .main-section {
         flex-direction: column-reverse;
     }
@@ -451,5 +463,143 @@
 @media (max-width: 375px) {
     .case-section .container {
         padding: 64px 12px;
+    }
+}
+
+//=============== Podcast Section ======================//
+.podcast-wrapper {
+    background-color: #F5F5F5;
+    margin-top: 40px;
+    padding: 24px;
+    .podcast-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        .podcast-item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .podcast-desc {
+                padding-bottom: 8px;
+                border-bottom: 1px solid gray;
+            }
+            .podcast-text {
+                display: flex;
+                flex-direction: row;
+                line-height: $font-line-height;
+                gap: 8px;
+            }
+            i {
+                color: $color-blue;
+                font-size: $font-size-base;
+            }
+            .podcast-link {
+                display: inline-block;
+                padding: 8px 16px;
+                border: 1px solid #000;
+                border-radius: 40px;
+                background-color: transparent;
+                cursor: pointer;
+                width: auto;         // ← 確保不是 100%
+                max-width: fit-content; // ← 根據內容自動縮放寬度
+                transition: background-color 0.3s;
+                &:hover {
+                    color: #ffffff;
+                    background-color: #000000;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 576px) { 
+    .podcast-list {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .podcast-list {
+        flex-direction: column;
+    }
+}
+
+//=============== Contact Section ======================//
+.contact-wrapper {
+    padding: 80px 0;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            .contact-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #000;
+                span {
+                    padding: 0;
+                }
+                .contact-mail {
+                    font-size: 32px;
+                    text-decoration: underline;
+                    
+                }
+                .contact-fill {
+                    font-size: 28px;
+                    flex: 1;
+                }
+                .contact-forward {
+                    
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                .contact-icon {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact-wrapper {
+        padding: 64px 12px;
+        border-bottom: 1px solid gray;
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .contact-list {
+                gap: 24px;
+                .contact-item {
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    gap: 8px;
+                    .contact-mail {
+                        font-size: 24px;
+                    }
+                    .contact-fill {
+                        font-size: 24px;
+                        flex: 1;
+                    }
+                    .contact-forward {
+                        width: 100%;
+                        order: 2;
+                    }
+
+                }
+            }
+        }
+    }
+    .h3 {
+        font-size: 24px;
     }
 }
