@@ -67,7 +67,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  background-color: #fbfbfb;
+  background-color: #ffffff;
 }
 
 img {
@@ -80,6 +80,11 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+}
+
+hr {
+  line-height: 1px;
+  background-color: gray;
 }
 
 .h2 {
@@ -219,6 +224,11 @@ a {
   height: 44px;
 }
 
+.bt-line {
+  display: block;
+  border-bottom: 2px solid gray;
+}
+
 /*===== Page - index =====*/
 .about-profile {
   display: flex;
@@ -306,6 +316,9 @@ a {
   }
 }
 @media (max-width: 375px) {
+  .bt-line {
+    border-bottom: none;
+  }
   .about-profile {
     flex-direction: column;
   }
@@ -366,6 +379,8 @@ a {
 .main-section {
   display: flex;
   flex-direction: column;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
 .main-wrapper {
@@ -467,7 +482,7 @@ a {
   }
   .h2 {
     font-size: 48px;
-    text-align: center;
+    text-align: start;
   }
   .pj-block {
     width: 100%;
@@ -501,6 +516,98 @@ a {
   }
   .pj-footer-cycle {
     align-self: flex-end;
+  }
+}
+.case-section .container {
+  padding: 80px 0;
+}
+
+.case-wrapper {
+  display: flex;
+  padding-top: 24px;
+}
+
+.case-img {
+  width: 57.48%;
+  padding: 24px;
+  background-color: #EDEDED;
+}
+
+.case-desc {
+  width: 42.4%;
+}
+
+.top-content {
+  width: calc(100% - 24px);
+  margin-left: -195px;
+  margin-right: 195px;
+  background: white;
+  margin-top: 28px;
+}
+.top-content p {
+  padding-top: 24px;
+}
+
+.bottom-content {
+  background: #f5f5f5;
+  margin-top: -40px;
+  margin-left: 24px;
+  flex-grow: 1;
+}
+.bottom-content p {
+  padding: 24px 0;
+}
+
+.top-content, .bottom-content {
+  padding: 80px 40px;
+}
+
+.case_contact {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #0027D5;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+.podcast-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .case-wrapper {
+    flex-direction: column;
+  }
+  .case-img {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .case-desc {
+    width: 100%;
+  }
+  .top-content {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  .bottom-content {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .top-content,
+  .bottom-content {
+    padding: 40px 24px;
+  }
+  .break-line {
+    display: inline-block;
+  }
+}
+@media (max-width: 375px) {
+  .case-section .container {
+    padding: 64px 12px;
   }
 }
 .swiper {
