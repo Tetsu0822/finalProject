@@ -344,6 +344,21 @@ hr {
     width: 80%;
   }
 }
+@media (max-width: 576px) {
+  .about-desc {
+    width: auto;
+    position: relative;
+    z-index: 10;
+    margin-top: -150px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 0;
+    bottom: auto;
+    font-size: 18px;
+    padding: 40px 24px;
+    background-color: white;
+  }
+}
 @media (max-width: 375px) {
   .about-profile {
     flex-direction: column;
@@ -495,7 +510,17 @@ hr {
   text-align: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 992px) {
+  .srv-wrapper {
+    width: 100%;
+    padding: 64px 12px;
+  }
+  .pj-block, .pj-block-reverse {
+    display: flex;
+    padding: 0 40px;
+  }
+}
+@media (max-width: 576px) {
   .main-section {
     flex-direction: column-reverse;
   }
@@ -633,6 +658,11 @@ hr {
     display: inline-block;
   }
 }
+@media (max-width: 768px) {
+  .case-section .container {
+    padding: 64px 12px;
+  }
+}
 @media (max-width: 375px) {
   .case-section .container {
     padding: 64px 12px;
@@ -684,6 +714,31 @@ hr {
   background-color: #000000;
 }
 
+@media (max-width: 992px) {
+  .podcast-list {
+    gap: 16px;
+  }
+  .podcast-list .podcast-item .h4 {
+    font-size: 20px;
+  }
+  .podcast-list .podcast-item .podcast-link {
+    text-wrap: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .podcast-list {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding: 0 80px;
+  }
+  .podcast-list .podcast-item .h4 {
+    font-size: 20px;
+  }
+  .podcast-list .podcast-item .podcast-link {
+    text-wrap: nowrap;
+  }
+}
 @media (max-width: 576px) {
   .podcast-list {
     flex-direction: column;
@@ -734,7 +789,7 @@ hr {
   height: 44px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 576px) {
   .contact-wrapper {
     padding: 64px 12px;
     border-bottom: 1px solid gray;
@@ -759,12 +814,14 @@ hr {
     font-size: 24px;
     flex: 1;
   }
-  .contact-wrapper .container .contact-list .contact-item .contact-forward {
-    width: 100%;
-    order: 2;
-  }
   .h3 {
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact-forward {
+    width: 100%;
+    order: 2;
   }
 }
 .mail-block {
@@ -775,16 +832,32 @@ hr {
 
 .mail-photo {
   width: 100%;
-  height: 375px;
+  height: auto;
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo9.png?raw=true");
 }
 
 .about-intro2 {
   width: 100%;
   height: auto;
-  padding: 40px 80px 0 80px;
+  padding: 80px;
 }
 
+@media (max-width: 576px) {
+  .about-intro2 {
+    padding: 40px;
+  }
+  .mail-block {
+    padding: 12px 0;
+  }
+}
+@media (max-width: 375px) {
+  .about-intro2 {
+    padding: 12px;
+  }
+  .mail-block {
+    padding: 8px 0;
+  }
+}
 /*===== Page - Blog =====*/
 .last-news {
   display: flex;
@@ -1079,9 +1152,6 @@ hr {
   .barBlock {
     padding: 0 100px;
   }
-  .bottom-wrap {
-    display: none;
-  }
 }
 @media (max-width: 576px) {
   .barBlock {
@@ -1232,8 +1302,8 @@ html, body {
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background-color: #0027D5;
   color: #fff;
   border-radius: 50%;
@@ -1256,32 +1326,10 @@ html, body {
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-  .swiper-wrapper-area {
-    display: block;
-    height: 520px;
-  }
-  .swiper-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 100%;
-  }
-  .swiper-button-prev {
-    left: auto;
-    right: 15%;
-  }
-  li.swiper-slide {
-    width: calc(100vw - 32px);
-    flex-shrink: 0;
-  }
-}
 li.swiper-slide {
   background: #fff;
   overflow: hidden;
-  width: 300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1290,7 +1338,7 @@ li.swiper-slide {
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1357,9 +1405,116 @@ li.swiper-slide {
   background-color: #000000;
 }
 
+@media screen and (max-width: 1200px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: auto;
+  }
+  .swiper {
+    max-width: 1150px;
+    margin-left: auto;
+  }
+  .card-img {
+    width: calc((100vw - 136px) / 3);
+    height: 200px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 12px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: auto;
+  }
+  .swiper {
+    max-width: 990px;
+    margin-left: auto;
+  }
+  .card-tags {
+    align-items: center;
+    gap: 3px;
+  }
+  .card-tags-text {
+    font-size: 20px;
+  }
+  .card-title {
+    font-size: 24px;
+  }
+  .card-mark {
+    font-size: 14px;
+    padding: 6px 6px;
+  }
+  .card-img {
+    width: auto;
+    height: 200px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 12px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: 500px;
+  }
+  .swiper {
+    max-width: 760px;
+    margin-left: auto;
+  }
+  .card-tags {
+    align-items: center;
+    gap: 1px;
+  }
+  .card-tags-text {
+    font-size: 14px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-mark {
+    font-size: 12px;
+    padding: 6px 6px;
+  }
+  .card-img {
+    width: auto;
+    height: 150px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 12px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: 600px;
+  }
+  .swiper {
+    margin-left: auto;
+  }
+  .card-img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 24px);
+  }
+}
 @media screen and (max-width: 375px) {
   .swiper-wrapper-area {
     height: auto;
+  }
+  .swiper {
+    width: 100%;
+    margin-left: auto;
   }
   .card-img {
     width: 100%;
@@ -1369,5 +1524,6 @@ li.swiper-slide {
   }
   li.swiper-slide {
     width: calc(100vw - 24px);
+    height: 440px;
   }
 }/*# sourceMappingURL=all.css.map */

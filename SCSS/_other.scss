@@ -1,4 +1,4 @@
-// 防止橫向滾動
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -30,8 +30,8 @@ html, body {
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background-color: #0027D5;
   color: #fff;
   border-radius: 50%;
@@ -52,34 +52,11 @@ html, body {
   font-size: 18px;
   color: #fff;
 }
-
-@media screen and (max-width:768px) {
-  .swiper-wrapper-area {
-    display: block;
-    height: 520px;
-  }
-  .swiper-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 100%;
-  }
-  .swiper-button-prev {
-    left: auto;
-    right: 15%;
-  }
-  li.swiper-slide {
-    width: calc(100vw - 32px);
-    flex-shrink: 0;
-  }
-}
   
 li.swiper-slide {
   background: #fff;
   overflow: hidden;
-  width: 300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,7 +64,7 @@ li.swiper-slide {
 }
 .card-img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
 }
 .card-content {
@@ -148,9 +125,132 @@ li.swiper-slide {
     background-color: #000000;
 }
 
+@media screen and (max-width:1200px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: auto;
+  }
+  .swiper {
+    max-width: 1150px;
+    margin-left: auto;
+  }
+  .card-img {
+    width: calc((100vw - 136px) / 3);
+    height: 200px;
+    object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 12px);
+  }
+}
+
+@media screen and (max-width:992px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: auto;
+  }
+  .swiper {
+    max-width: 990px;
+    margin-left: auto;
+  }
+  .card-tags {
+    align-items: center;
+    gap: 3px;
+  }
+  .card-tags-text {
+    font-size: 20px;
+  }
+  .card-title {
+    font-size: 24px;
+  }
+  .card-mark {
+    font-size: 14px;
+    padding: 6px 6px;
+  } 
+  .card-img {
+    width: auto;
+    height: 200px;
+    object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 12px);
+  }
+}
+
+// @media screen and (max-width:768px) {
+//   .swiper-wrapper-area {
+//     display: block;
+//     height: 450px;
+//   }
+//   .swiper-button-next,
+//   .swiper-button-prev {
+//     top: 100%;
+//   }
+//   .swiper-button-prev {
+//     left: auto;
+//     right: 15%;
+//   }
+// }
+
+@media screen and (max-width:768px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: 500px;
+  }
+  .swiper {
+    max-width: 760px;
+    margin-left: auto;
+  }
+  .card-tags {
+    align-items: center;
+    gap: 1px;
+  }
+  .card-tags-text {
+      font-size: 14px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-mark {
+      font-size: 12px;
+      padding: 6px 6px;
+  } 
+  .card-img {
+    width: auto;
+    height: 150px;
+    object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 12px);
+  }
+
+}
+
+@media screen and (max-width:576px) {
+  .swiper-wrapper-area {
+    display: block;
+    height: 600px;
+  }
+  .swiper {
+    margin-left: auto;
+  }
+  .card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+  }
+  li.swiper-slide {
+    width: calc(100vw - 24px);
+  }
+}
+
 @media screen and (max-width:375px) {
   .swiper-wrapper-area {
     height: auto;
+  }
+  .swiper {
+    width: 100%;
+    margin-left: auto;
   }
   .card-img {
     width: 100%;
@@ -159,5 +259,6 @@ li.swiper-slide {
   }
   li.swiper-slide {
     width: calc(100vw - 24px);
+    height: 440px;
   }
 }
