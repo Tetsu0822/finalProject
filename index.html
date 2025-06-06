@@ -10,14 +10,14 @@
     <!-- 導覽列 -->
     <div class="navbar">
         <ul>
-            <li><a href="index.html" class="nav-item">首頁</a></li>
-            <li><a href="blog.html" class="nav-item">部落格</a></li>
+            <li><a href="index.html" title="首頁" class="nav-item">首頁</a></li>
+            <li><a href="blog.html" title="部落格" class="nav-item">部落格</a></li>
         </ul>
     </div>
     <!-- 主內容區 -->
     <main>
         <!-- About Section -->
-        <section class="about-section bt-line">
+        <section class="about-section bt-line d-none">
             <div class="about-profile">
                 <div class="about-photo"></div>
                 <div class="about-intro">
@@ -44,8 +44,8 @@
                 </ul>
             </div>
         </section>
-        <div class="main-section bt-line">
-            <div class="main-wrapper">
+        <div class="main-section">
+            <div class="main-wrapper bt-line">
                 <div class="container">
                     <div class="swiper-header">
                         <h2 class="h2">部落格精選</h2>
@@ -200,7 +200,7 @@
                 </div>
             </div>
         </div>
-        <section class="case-section">
+        <section class="case-section bt-line">
             <div class="container">
                 <h2 class="h2">職涯諮詢<br class="break-line">成功案例</h2>
                 <div class="case-wrapper">
@@ -293,8 +293,8 @@
         </section>
         <section class="about-section bt-line">
             <div class="about-profile">
-                <div class="about-photo"></div>
-                <div class="about-intro">
+                <div class="about-photo mail-photo"></div>
+                <div class="about-intro about-intro2">
                     <div id="mc_embed_shell">
                         <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
                         <style type="text/css">
@@ -306,6 +306,14 @@
                                 }
                                 #mc_embed_signup h2 {
                                     font-size: 64px;font-weight: bold;padding-bottom: 16px;margin: 0;
+                                }
+                                @media (max-width:375px) {
+                                    #mc_embed_signup {
+                                        padding: 40px 24px;
+                                    }
+                                    #mc_embed_signup h2 {
+                                        font-size: 48px;
+                                    }
                                 }
                                 #mc_embed_signup input {
                                     padding: 8px 16px;
