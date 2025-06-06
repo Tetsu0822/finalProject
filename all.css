@@ -188,6 +188,14 @@ hr {
   font-size: 24px;
 }
 
+.h5 {
+  font-size: 20px;
+}
+
+.h6 {
+  font-size: 18px;
+}
+
 .text-primary {
   color: #0027D5;
 }
@@ -752,6 +760,12 @@ hr {
     font-size: 24px;
   }
 }
+.mail-block {
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+}
+
 .swiper {
   width: 90%;
 }
